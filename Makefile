@@ -1,11 +1,20 @@
-CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Wextra -Iinclude  
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c99 -g -D_GNU_SOURCE
+LIBS = -lssl -lcrypto
+
+SOURCES = server.c logger.c database.c
+OBJECTS = $(SOURCES:.c=.o)
 TARGET = server
 
-all:
-	    $(CXX) $(CXXFLAGS) src/main.cpp src/Server/Server.cpp src/ClientSession/ClientSession.cpp src/UserDatabase/UserDatabase.cpp src/Logger/Logger.cpp src/DataProcessor/DataProcessor.cpp -o $(TARGET)
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(OBJECTS) -o $(TARGET) $(LIBS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	    rm -f $(TARGET)
+	rm -f $(OBJECTS) $(TARGET)
 
 .PHONY: all clean
