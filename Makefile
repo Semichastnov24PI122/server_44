@@ -1,20 +1,14 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -std=c99 -g -D_GNU_SOURCE
-LIBS = -lssl -lcrypto
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall
+TESTS = basic auth vectors network interface sha_salt
 
-SOURCES = server.c logger.c database.c
-OBJECTS = $(SOURCES:.c=.o)
-TARGET = server
-
-all: $(TARGET)
-
-$(TARGET): $(OBJECTS)
-	$(CC) $(OBJECTS) -o $(TARGET) $(LIBS)
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+all:
+	for t in $(TESTS); do \
+ 		mkdir -p tests/build; \
+		$(CXX) $(CXXFLAGS) tests/test_$$t.cpp -o tests/build/test_$$t; \
+ 		tests/build/test_$$t; \
+ 		echo; \
+	done
 
 clean:
-	rm -f $(OBJECTS) $(TARGET)
-
-.PHONY: all clean
+	rm -rf tests/build

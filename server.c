@@ -21,7 +21,6 @@ uint32_t calculate_sum_of_squares(uint32_t *data, uint32_t size) {
         uint64_t square = (uint64_t)data[i] * data[i];
         sum += square;
         
-        // Проверка переполнения (по ТЗ)
         if (sum > 0xFFFFFFFFULL) {
             return 0xFFFFFFFF; // 2^32 - 1
         }
@@ -165,8 +164,6 @@ snprintf(error_msg, sizeof(error_msg), "Failed to bind to port %d", port);
         printf("Client connected from %s\n", client_ip);
         log_message(LOG_INFO, "Client connected", client_ip);
         
-        // ================= АУТЕНТИФИКАЦИЯ =================
-        // Клиент отправляет 60 байт: login(4) + salt(16) + hash(40)
         char auth_data[64];
         int bytes_received = recv(client_socket, auth_data, 60, MSG_WAITALL);
         
@@ -220,10 +217,8 @@ snprintf(error_msg, sizeof(error_msg), "Failed to bind to port %d", port);
         log_message(LOG_INFO, "Client authenticated successfully", login);
         printf("✅ Client %s authenticated successfully\n", login);
         
-        // ================= ОБРАБОТКА ВЕКТОРОВ =================
         printf("\n--- Processing vectors ---\n");
         
-        // 1. Количество векторов
         uint32_t num_vectors;
         bytes_received = recv(client_socket, &num_vectors, 4, MSG_WAITALL);
         
@@ -235,7 +230,6 @@ snprintf(error_msg, sizeof(error_msg), "Failed to bind to port %d", port);
         
         printf("DEBUG: Number of vectors: %u\n", num_vectors);
         
-        // 2. Обрабатываем каждый вектор
         for (uint32_t i = 0; i < num_vectors; i++) {
             // Размер вектора
             uint32_t vector_size;
@@ -258,8 +252,6 @@ bytes_received = recv(client_socket, &vector_size, 4, MSG_WAITALL);
                 break;
             }
             
-            // ВАЖНО: Данные уже в правильном формате!
-            // Не нужно делать ntohl() - debug показал что данные верные
             printf("DEBUG: Vector %u values: %u %u %u %u\n", 
                    i + 1, vector_data[0], vector_data[1], 
                    vector_data[2], vector_data[3]);
