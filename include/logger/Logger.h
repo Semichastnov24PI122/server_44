@@ -5,16 +5,19 @@
 
 enum class LogLevel {
     INFO,
+    WARNING,    // Добавляем WARNING
     ERROR,
     CRITICAL
 };
 
 class Logger {
 private:
-    static Logger* instance;
-    std::string logFile;
+    static Logger* instance;  // Добавляем static declaration
+    std::string logFile;      // Добавляем переменную
     
-    Logger();
+    Logger();                  // Приватный конструктор
+    Logger(const Logger&) = delete;
+    Logger& operator=(const Logger&) = delete;
     
 public:
     static Logger& getInstance();
@@ -22,11 +25,9 @@ public:
     bool initialize(const std::string& filename);
     void log(LogLevel level, const std::string& message, 
              const std::string& params = "");
-    void reset(); // Для тестов
+    void reset();
     
-    // Запрет копирования
-    Logger(const Logger&) = delete;
-    Logger& operator=(const Logger&) = delete;
+    ~Logger() = default;
 };
 
 #endif

@@ -1,16 +1,12 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -I./include
-LDFLAGS = -pthread -lssl -lcrypto  # Для SHA1 из OpenSSL
+LDFLAGS = -pthread
 
-# Для тестов
-TEST_CXXFLAGS = $(CXXFLAGS)
-TEST_LDFLAGS = $(LDFLAGS) -lunittest++
+TEST_LIBS = -lUnitTest++
 
-# Исходные файлы сервера
 SRC_DIR = src
 SRC_FILES = \
     $(SRC_DIR)/auth/AuthManager.cpp \
-    $(SRC_DIR)/database.cpp \
     $(SRC_DIR)/hash/SHA1.cpp \
     $(SRC_DIR)/logger.cpp \
     $(SRC_DIR)/processing/VectorProcessor.cpp \
@@ -20,19 +16,20 @@ SRC_FILES = \
 
 OBJ_FILES = $(SRC_FILES:.cpp=.o)
 
-# Тесты
 TEST_DIR = tests
 TEST_FILES = \
-    $(TEST_DIR)/test_auth_unit.cpp \
-    $(TEST_DIR)/test_vector_unit.cpp \
+    $(TEST_DIR)/test_auth.cpp \
+    $(TEST_DIR)/test_vector.cpp \
+    $(TEST_DIR)/test_logger.cpp \
     $(TEST_DIR)/test_interface.cpp \
-    $(TEST_DIR)/test_network.cpp \
-    $(TEST_DIR)/test_sha_salt.cpp \
+    $(TEST_DIR)/test_sha.cpp \
+    $(TEST_DIR)/test_all_network.cpp \
     $(TEST_DIR)/test_main.cpp
 
 TEST_OBJ_FILES = $(TEST_FILES:.cpp=.o)
+TEST_RUNNER = $(TEST_DIR)/test_main_runner.cpp
+TEST_RUNNER_OBJ = $(TEST_DIR)/test_main_runner.o
 
-# Цели
 TARGET = server
 TEST_TARGET = run_tests
 
@@ -43,18 +40,18 @@ $(TARGET): $(OBJ_FILES)
 
 tests: $(TEST_TARGET)
 
-$(TEST_TARGET): $(TEST_OBJ_FILES) $(filter-out $(SRC_DIR)/main.o, $(OBJ_FILES))
-	$(CXX) $^ -o $@ $(TEST_LDFLAGS)
+# ВАЖНО: Добавляем test_main_runner.o к линковке
+$(TEST_TARGET): $(TEST_OBJ_FILES) $(TEST_RUNNER_OBJ) $(filter-out $(SRC_DIR)/main.o, $(OBJ_FILES))
+	$(CXX) $^ -o $@ $(LDFLAGS) $(TEST_LIBS)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	 	rm -f $(OBJ_FILES) $(TEST_OBJ_FILES) $(TARGET) $(TEST_TARGET)
-		rm -f *.log *.db 
+	rm -f $(OBJ_FILES) $(TEST_OBJ_FILES) $(TEST_RUNNER_OBJ) $(TARGET) $(TEST_TARGET)
+	rm -f *.log *.db
 
 test: tests
-		./$(TEST_TARGET)
+	./$(TEST_TARGET)
 
 .PHONY: all tests clean test
-
