@@ -8,7 +8,6 @@ server.log
 *.backup
 
 # Тестовые файлы
-test_*
 debug_*
 simple_*
 
