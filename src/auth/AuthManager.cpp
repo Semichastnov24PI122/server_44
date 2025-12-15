@@ -1,3 +1,10 @@
+/**
+ * @file AuthManager.cpp
+ * @brief Реализация менеджера аутентификации.
+ *
+ * Загрузка базы пользователей, проверка логинов/паролей,
+ * генерация и проверка хешей SHA-1.
+ */
 #include "auth/AuthManager.h"
 #include "hash/SHA1.h"
 #include <fstream>

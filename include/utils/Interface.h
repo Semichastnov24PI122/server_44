@@ -1,3 +1,10 @@
+/**
+ * @class Interface
+ * @brief Парсер параметров командной строки.
+ *
+ * Обрабатывает аргументы: --port, --config, --log, --help.
+ * Валидирует номера портов (1024-65535) и доступность файлов.
+ */
 #ifndef INTERFACE_H
 #define INTERFACE_H
 

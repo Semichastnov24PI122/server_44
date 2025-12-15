@@ -1,0 +1,58 @@
+\hypertarget{database_8cpp}{}\doxysection{Файл database.\+cpp}
+\label{database_8cpp}\index{database.cpp@{database.cpp}}
+{\ttfamily \#include \char`\"{}auth/\+Auth\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+Граф включаемых заголовочных файлов для database.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classDatabase}{Database}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{database_8cpp_a9842a5373033ac7161cae0b13b06720d}{load\+\_\+user\+\_\+database}} (const std\+::string \&filename, std\+::map$<$ std\+::string, std\+::string $>$ \&users)
+\item 
+bool \mbox{\hyperlink{database_8cpp_aa116912d401ab522225bbab3fdbd806f}{verify\+\_\+user}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&users, const std\+::string \&user, const std\+::string \&hash)
+\item 
+size\+\_\+t \mbox{\hyperlink{database_8cpp_a74f180cce555d6fe119280343f524efc}{count\+\_\+users}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&users)
+\item 
+void \mbox{\hyperlink{database_8cpp_a797ece49cd498df086de7a6c3f3222c5}{add\+\_\+user\+\_\+to\+\_\+db}} (std\+::map$<$ std\+::string, std\+::string $>$ \&users, const std\+::string \&user, const std\+::string \&hash)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{database_8cpp_a797ece49cd498df086de7a6c3f3222c5}\label{database_8cpp_a797ece49cd498df086de7a6c3f3222c5}} 
+\index{database.cpp@{database.cpp}!add\_user\_to\_db@{add\_user\_to\_db}}
+\index{add\_user\_to\_db@{add\_user\_to\_db}!database.cpp@{database.cpp}}
+\doxysubsubsection{\texorpdfstring{add\_user\_to\_db()}{add\_user\_to\_db()}}
+{\footnotesize\ttfamily void add\+\_\+user\+\_\+to\+\_\+db (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::string $>$ \&}]{users,  }\item[{const std\+::string \&}]{user,  }\item[{const std\+::string \&}]{hash }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{database_8cpp_a74f180cce555d6fe119280343f524efc}\label{database_8cpp_a74f180cce555d6fe119280343f524efc}} 
+\index{database.cpp@{database.cpp}!count\_users@{count\_users}}
+\index{count\_users@{count\_users}!database.cpp@{database.cpp}}
+\doxysubsubsection{\texorpdfstring{count\_users()}{count\_users()}}
+{\footnotesize\ttfamily size\+\_\+t count\+\_\+users (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{users }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{database_8cpp_a9842a5373033ac7161cae0b13b06720d}\label{database_8cpp_a9842a5373033ac7161cae0b13b06720d}} 
+\index{database.cpp@{database.cpp}!load\_user\_database@{load\_user\_database}}
+\index{load\_user\_database@{load\_user\_database}!database.cpp@{database.cpp}}
+\doxysubsubsection{\texorpdfstring{load\_user\_database()}{load\_user\_database()}}
+{\footnotesize\ttfamily bool load\+\_\+user\+\_\+database (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$ \&}]{users }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{database_8cpp_aa116912d401ab522225bbab3fdbd806f}\label{database_8cpp_aa116912d401ab522225bbab3fdbd806f}} 
+\index{database.cpp@{database.cpp}!verify\_user@{verify\_user}}
+\index{verify\_user@{verify\_user}!database.cpp@{database.cpp}}
+\doxysubsubsection{\texorpdfstring{verify\_user()}{verify\_user()}}
+{\footnotesize\ttfamily bool verify\+\_\+user (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{users,  }\item[{const std\+::string \&}]{user,  }\item[{const std\+::string \&}]{hash }\end{DoxyParamCaption})}
+

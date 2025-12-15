@@ -1,3 +1,10 @@
+/**
+ * @file Interface.cpp
+ * @brief Реализация парсера командной строки.
+ *
+ * Разбор аргументов с использованием getopt_long.
+ * Валидация портов, проверка существования файлов.
+ */
 #include "utils/Interface.h"
 #include <iostream>
 #include <fstream>

@@ -1,0 +1,35 @@
+\hypertarget{AuthManager_8h_source}{}\doxysection{Auth\+Manager.\+h}
+\label{AuthManager_8h_source}\index{AuthManager.h@{AuthManager.h}}
+\mbox{\hyperlink{AuthManager_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef AUTHMANAGER\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define AUTHMANAGER\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classAuthManager}{AuthManager}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     std::map<std::string, std::string> \mbox{\hyperlink{classAuthManager_ae5f3139f20f2ae23f8a887c8f68633cc}{users}};}
+\DoxyCodeLine{17     }
+\DoxyCodeLine{18     std::string \mbox{\hyperlink{classAuthManager_a122971de4c1531785a9c8878a233cece}{padZeros}}(\textcolor{keyword}{const} std::string\& str, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{19     std::string \mbox{\hyperlink{classAuthManager_ab869bc61d17ee18c394b299dc23b9dae}{computeSHA1}}(\textcolor{keyword}{const} std::string\& salt, \textcolor{keyword}{const} std::string\& password);}
+\DoxyCodeLine{20     }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \textcolor{comment}{// Только то, что используется в тестах и сервере}}
+\DoxyCodeLine{23     \mbox{\hyperlink{classAuthManager_aa41d64c2eaf8c67cc6328065cbf4ffc1}{AuthManager}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{24     \mbox{\hyperlink{classAuthManager_a5843bd1ad5fc0ae9d72dcfa70cdab1cc}{\string~AuthManager}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{25     }
+\DoxyCodeLine{26     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classAuthManager_acf6d31be99f4008906f1414d9c5a2ed9}{loadUserDatabase}}(\textcolor{keyword}{const} std::string\& filename);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classAuthManager_a8ab37629ad9af4e8242d2473c5c55d89}{userExists}}(\textcolor{keyword}{const} std::string\& username);}
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classAuthManager_a64de0bded581de46e0ca212673a577e4}{authenticate}}(\textcolor{keyword}{const} std::string\& username, }
+\DoxyCodeLine{29                      \textcolor{keyword}{const} std::string\& salt, }
+\DoxyCodeLine{30                      \textcolor{keyword}{const} std::string\& clientHash);}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{classAuthManager_a577d1623e68426287445011319063564}{addUser}}(\textcolor{keyword}{const} std::string\& username, \textcolor{keyword}{const} std::string\& passwordHash);}
+\DoxyCodeLine{32     std::string \mbox{\hyperlink{classAuthManager_ae8d53ad75b29c1b6fcc83f935e68a757}{generateSalt64}}();}
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,120 @@
+\hypertarget{classAuthManager}{}\doxysection{Класс Auth\+Manager}
+\label{classAuthManager}\index{AuthManager@{AuthManager}}
+
+
+Менеджер аутентификации пользователей.  
+
+
+
+
+{\ttfamily \#include $<$Auth\+Manager.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAuthManager_aa41d64c2eaf8c67cc6328065cbf4ffc1}{Auth\+Manager}} ()=default
+\item 
+\mbox{\hyperlink{classAuthManager_a5843bd1ad5fc0ae9d72dcfa70cdab1cc}{$\sim$\+Auth\+Manager}} ()=default
+\item 
+bool \mbox{\hyperlink{classAuthManager_acf6d31be99f4008906f1414d9c5a2ed9}{load\+User\+Database}} (const std\+::string \&filename)
+\item 
+bool \mbox{\hyperlink{classAuthManager_a8ab37629ad9af4e8242d2473c5c55d89}{user\+Exists}} (const std\+::string \&username)
+\item 
+bool \mbox{\hyperlink{classAuthManager_a64de0bded581de46e0ca212673a577e4}{authenticate}} (const std\+::string \&username, const std\+::string \&salt, const std\+::string \&client\+Hash)
+\item 
+void \mbox{\hyperlink{classAuthManager_a577d1623e68426287445011319063564}{add\+User}} (const std\+::string \&username, const std\+::string \&password\+Hash)
+\item 
+std\+::string \mbox{\hyperlink{classAuthManager_ae8d53ad75b29c1b6fcc83f935e68a757}{generate\+Salt64}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classAuthManager_a122971de4c1531785a9c8878a233cece}{pad\+Zeros}} (const std\+::string \&str, size\+\_\+t length)
+\item 
+std\+::string \mbox{\hyperlink{classAuthManager_ab869bc61d17ee18c394b299dc23b9dae}{compute\+SHA1}} (const std\+::string \&salt, const std\+::string \&password)
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classAuthManager_ae5f3139f20f2ae23f8a887c8f68633cc}{users}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Менеджер аутентификации пользователей. 
+
+Загружает базу пользователей из файла, проверяет логины и хеши паролей. Использует схему аутентификации SHA-\/1 с 64-\/битной солью от клиента. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classAuthManager_aa41d64c2eaf8c67cc6328065cbf4ffc1}\label{classAuthManager_aa41d64c2eaf8c67cc6328065cbf4ffc1}} 
+\index{AuthManager@{AuthManager}!AuthManager@{AuthManager}}
+\index{AuthManager@{AuthManager}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{AuthManager()}{AuthManager()}}
+{\footnotesize\ttfamily Auth\+Manager\+::\+Auth\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classAuthManager_a5843bd1ad5fc0ae9d72dcfa70cdab1cc}\label{classAuthManager_a5843bd1ad5fc0ae9d72dcfa70cdab1cc}} 
+\index{AuthManager@{AuthManager}!````~AuthManager@{$\sim$AuthManager}}
+\index{````~AuthManager@{$\sim$AuthManager}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$AuthManager()}{~AuthManager()}}
+{\footnotesize\ttfamily Auth\+Manager\+::$\sim$\+Auth\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classAuthManager_a577d1623e68426287445011319063564}\label{classAuthManager_a577d1623e68426287445011319063564}} 
+\index{AuthManager@{AuthManager}!addUser@{addUser}}
+\index{addUser@{addUser}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily void Auth\+Manager\+::add\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password\+Hash }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAuthManager_a64de0bded581de46e0ca212673a577e4}\label{classAuthManager_a64de0bded581de46e0ca212673a577e4}} 
+\index{AuthManager@{AuthManager}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily bool Auth\+Manager\+::authenticate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{salt,  }\item[{const std\+::string \&}]{client\+Hash }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAuthManager_ab869bc61d17ee18c394b299dc23b9dae}\label{classAuthManager_ab869bc61d17ee18c394b299dc23b9dae}} 
+\index{AuthManager@{AuthManager}!computeSHA1@{computeSHA1}}
+\index{computeSHA1@{computeSHA1}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{computeSHA1()}{computeSHA1()}}
+{\footnotesize\ttfamily std\+::string Auth\+Manager\+::compute\+SHA1 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{salt,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAuthManager_ae8d53ad75b29c1b6fcc83f935e68a757}\label{classAuthManager_ae8d53ad75b29c1b6fcc83f935e68a757}} 
+\index{AuthManager@{AuthManager}!generateSalt64@{generateSalt64}}
+\index{generateSalt64@{generateSalt64}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{generateSalt64()}{generateSalt64()}}
+{\footnotesize\ttfamily std\+::string Auth\+Manager\+::generate\+Salt64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAuthManager_acf6d31be99f4008906f1414d9c5a2ed9}\label{classAuthManager_acf6d31be99f4008906f1414d9c5a2ed9}} 
+\index{AuthManager@{AuthManager}!loadUserDatabase@{loadUserDatabase}}
+\index{loadUserDatabase@{loadUserDatabase}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{loadUserDatabase()}{loadUserDatabase()}}
+{\footnotesize\ttfamily bool Auth\+Manager\+::load\+User\+Database (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAuthManager_a122971de4c1531785a9c8878a233cece}\label{classAuthManager_a122971de4c1531785a9c8878a233cece}} 
+\index{AuthManager@{AuthManager}!padZeros@{padZeros}}
+\index{padZeros@{padZeros}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{padZeros()}{padZeros()}}
+{\footnotesize\ttfamily std\+::string Auth\+Manager\+::pad\+Zeros (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAuthManager_a8ab37629ad9af4e8242d2473c5c55d89}\label{classAuthManager_a8ab37629ad9af4e8242d2473c5c55d89}} 
+\index{AuthManager@{AuthManager}!userExists@{userExists}}
+\index{userExists@{userExists}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{userExists()}{userExists()}}
+{\footnotesize\ttfamily bool Auth\+Manager\+::user\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classAuthManager_ae5f3139f20f2ae23f8a887c8f68633cc}\label{classAuthManager_ae5f3139f20f2ae23f8a887c8f68633cc}} 
+\index{AuthManager@{AuthManager}!users@{users}}
+\index{users@{users}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ Auth\+Manager\+::users\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AuthManager_8h}{Auth\+Manager.\+h}}\item 
+\mbox{\hyperlink{AuthManager_8cpp}{Auth\+Manager.\+cpp}}\end{DoxyCompactItemize}

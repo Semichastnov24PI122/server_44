@@ -1,0 +1,8 @@
+<map id="AuthManager.h" name="AuthManager.h">
+<area shape="rect" id="node1" title=" " alt="" coords="193,5,313,32"/>
+<area shape="rect" id="node2" href="$AuthManager_8cpp.html" title="Реализация менеджера аутентификации." alt="" coords="5,80,140,107"/>
+<area shape="rect" id="node3" href="$Server_8h.html" title=" " alt="" coords="215,80,290,107"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Главная функция сервера." alt="" coords="155,155,238,181"/>
+<area shape="rect" id="node5" href="$server_8cpp.html" title="Реализация класса Server." alt="" coords="272,155,361,181"/>
+<area shape="rect" id="node6" href="$database_8cpp.html" title=" " alt="" coords="365,80,474,107"/>
+</map>

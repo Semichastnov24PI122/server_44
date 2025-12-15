@@ -1,0 +1,27 @@
+\hypertarget{VectorProcessor_8h_source}{}\doxysection{Vector\+Processor.\+h}
+\label{VectorProcessor_8h_source}\index{VectorProcessor.h@{VectorProcessor.h}}
+\mbox{\hyperlink{VectorProcessor_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef VECTORPROCESSOR\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define VECTORPROCESSOR\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <cstdint>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classVectorProcessor}{VectorProcessor}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \textcolor{comment}{// Сумма квадратов (по ТЗ)}}
+\DoxyCodeLine{17     \textcolor{keyword}{static} uint32\_t \mbox{\hyperlink{classVectorProcessor_a714e7e3aa9a61d056775e56910b4d958}{computeSumOfSquares}}(\textcolor{keyword}{const} std::vector<uint32\_t>\& vector);}
+\DoxyCodeLine{18     }
+\DoxyCodeLine{19     \textcolor{comment}{// Обработка нескольких векторов}}
+\DoxyCodeLine{20     \textcolor{keyword}{static} std::vector<uint32\_t> \mbox{\hyperlink{classVectorProcessor_a88b1e2afdf699e3000695744586dae32}{processVectors}}(}
+\DoxyCodeLine{21         \textcolor{keyword}{const} std::vector<std::vector<uint32\_t>>\& vectors);}
+\DoxyCodeLine{22     }
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24     \textcolor{keyword}{static} uint32\_t \mbox{\hyperlink{classVectorProcessor_a24bc496aba78bd3f343726fdf2b3cba4}{checkOverflow}}(uint64\_t value);}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

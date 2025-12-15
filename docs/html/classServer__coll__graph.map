@@ -1,0 +1,5 @@
+<map id="Server" name="Server">
+<area shape="rect" id="node1" title="Основной класс сетевого сервера." alt="" coords="72,95,136,121"/>
+<area shape="rect" id="node2" href="$classAuthManager.html" title="Менеджер аутентификации пользователей." alt="" coords="5,5,115,32"/>
+<area shape="rect" id="node3" href="$classLogger.html" title="Потокобезопасный регистратор событий." alt="" coords="139,5,205,32"/>
+</map>

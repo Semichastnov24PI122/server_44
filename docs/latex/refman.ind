@@ -1,0 +1,287 @@
+\begin{theindex}
+
+  \item {$\sim$AuthManager}
+    \subitem {AuthManager}, \hyperpage{10}
+  \item {$\sim$Logger}
+    \subitem {Logger}, \hyperpage{17}
+
+  \indexspace
+
+  \item {add}
+    \subitem {Database}, \hyperpage{12}
+  \item {add\_user\_to\_db}
+    \subitem {database.cpp}, \hyperpage{37}
+  \item {addUser}
+    \subitem {AuthManager}, \hyperpage{10}
+  \item {auth}
+    \subitem {Server}, \hyperpage{22}
+  \item {authenticate}
+    \subitem {AuthManager}, \hyperpage{10}
+  \item {AuthManager}, \hyperpage{9}
+    \subitem {$\sim$AuthManager}, \hyperpage{10}
+    \subitem {addUser}, \hyperpage{10}
+    \subitem {authenticate}, \hyperpage{10}
+    \subitem {AuthManager}, \hyperpage{10}
+    \subitem {computeSHA1}, \hyperpage{10}
+    \subitem {generateSalt64}, \hyperpage{10}
+    \subitem {loadUserDatabase}, \hyperpage{10}
+    \subitem {padZeros}, \hyperpage{11}
+    \subitem {userExists}, \hyperpage{11}
+    \subitem {users}, \hyperpage{11}
+  \item {AuthManager.cpp}, \hyperpage{36}
+  \item {AuthManager.h}, \hyperpage{27, 28}
+
+  \indexspace
+
+  \item {checkFileExists}
+    \subitem {Interface}, \hyperpage{14}
+  \item {checkFileWritable}
+    \subitem {Interface}, \hyperpage{14}
+  \item {checkOverflow}
+    \subitem {VectorProcessor}, \hyperpage{24}
+  \item {computeSHA1}
+    \subitem {AuthManager}, \hyperpage{10}
+  \item {computeSumOfSquares}
+    \subitem {VectorProcessor}, \hyperpage{24}
+  \item {count}
+    \subitem {Database}, \hyperpage{12}
+  \item {count\_users}
+    \subitem {database.cpp}, \hyperpage{37}
+  \item {CRITICAL}
+    \subitem {Logger.h}, \hyperpage{31}
+
+  \indexspace
+
+  \item {Database}, \hyperpage{11}
+    \subitem {add}, \hyperpage{12}
+    \subitem {count}, \hyperpage{12}
+    \subitem {load}, \hyperpage{12}
+    \subitem {users}, \hyperpage{12}
+    \subitem {verify}, \hyperpage{12}
+  \item {database.cpp}, \hyperpage{36}
+    \subitem {add\_user\_to\_db}, \hyperpage{37}
+    \subitem {count\_users}, \hyperpage{37}
+    \subitem {load\_user\_database}, \hyperpage{37}
+    \subitem {verify\_user}, \hyperpage{37}
+  \item {dbFile}
+    \subitem {Params}, \hyperpage{19}
+
+  \indexspace
+
+  \item {ERROR}
+    \subitem {Logger.h}, \hyperpage{31}
+
+  \indexspace
+
+  \item {generateSalt64}
+    \subitem {AuthManager}, \hyperpage{10}
+  \item {getInstance}
+    \subitem {Logger}, \hyperpage{18}
+  \item {getParams}
+    \subitem {Interface}, \hyperpage{14}
+  \item {getParseErrors}
+    \subitem {Interface}, \hyperpage{14}
+
+  \indexspace
+
+  \item {handleClient}
+    \subitem {Server}, \hyperpage{21}
+  \item {hash}
+    \subitem {SHA1}, \hyperpage{23}
+  \item {helpRequested}
+    \subitem {Interface}, \hyperpage{16}
+
+  \indexspace
+
+  \item {INFO}
+    \subitem {Logger.h}, \hyperpage{31}
+  \item {initialize}
+    \subitem {Logger}, \hyperpage{18}
+  \item {instance}
+    \subitem {Logger}, \hyperpage{18}
+  \item {Interface}, \hyperpage{13}
+    \subitem {checkFileExists}, \hyperpage{14}
+    \subitem {checkFileWritable}, \hyperpage{14}
+    \subitem {getParams}, \hyperpage{14}
+    \subitem {getParseErrors}, \hyperpage{14}
+    \subitem {helpRequested}, \hyperpage{16}
+    \subitem {Interface}, \hyperpage{14}
+    \subitem {isHelpRequested}, \hyperpage{14}
+    \subitem {isVersionRequested}, \hyperpage{15}
+    \subitem {params}, \hyperpage{16}
+    \subitem {parse}, \hyperpage{15}
+    \subitem {parseErrors}, \hyperpage{16}
+    \subitem {parseOptions}, \hyperpage{15}
+    \subitem {printHelp}, \hyperpage{15}
+    \subitem {printVersion}, \hyperpage{15}
+    \subitem {validateParams}, \hyperpage{15}
+    \subitem {validatePort}, \hyperpage{15}
+    \subitem {versionRequested}, \hyperpage{16}
+  \item {Interface.cpp}, \hyperpage{42}
+    \subitem {long\_options}, \hyperpage{43}
+    \subitem {PROGRAM\_NAME}, \hyperpage{43}
+    \subitem {PROGRAM\_VERSION}, \hyperpage{43}
+    \subitem {short\_options}, \hyperpage{43}
+  \item {Interface.h}, \hyperpage{34, 35}
+  \item {isHelpRequested}
+    \subitem {Interface}, \hyperpage{14}
+  \item {isVersionRequested}
+    \subitem {Interface}, \hyperpage{15}
+
+  \indexspace
+
+  \item {load}
+    \subitem {Database}, \hyperpage{12}
+  \item {load\_user\_database}
+    \subitem {database.cpp}, \hyperpage{37}
+  \item {loadUserDatabase}
+    \subitem {AuthManager}, \hyperpage{10}
+  \item {log}
+    \subitem {Logger}, \hyperpage{18}
+  \item {logFile}
+    \subitem {Logger}, \hyperpage{19}
+    \subitem {Params}, \hyperpage{20}
+  \item {Logger}, \hyperpage{16}
+    \subitem {$\sim$Logger}, \hyperpage{17}
+    \subitem {getInstance}, \hyperpage{18}
+    \subitem {initialize}, \hyperpage{18}
+    \subitem {instance}, \hyperpage{18}
+    \subitem {log}, \hyperpage{18}
+    \subitem {logFile}, \hyperpage{19}
+    \subitem {Logger}, \hyperpage{17}
+    \subitem {operator=}, \hyperpage{18}
+    \subitem {reset}, \hyperpage{18}
+  \item {logger}
+    \subitem {Server}, \hyperpage{23}
+  \item {Logger.cpp}, \hyperpage{38, 39}
+  \item {logger.cpp}, \hyperpage{38}
+  \item {Logger.h}, \hyperpage{30, 31}
+    \subitem {CRITICAL}, \hyperpage{31}
+    \subitem {ERROR}, \hyperpage{31}
+    \subitem {INFO}, \hyperpage{31}
+    \subitem {LogLevel}, \hyperpage{30}
+    \subitem {WARNING}, \hyperpage{31}
+  \item {LogLevel}
+    \subitem {Logger.h}, \hyperpage{30}
+  \item {long\_options}
+    \subitem {Interface.cpp}, \hyperpage{43}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{40}
+  \item {main.cpp}, \hyperpage{40}
+    \subitem {main}, \hyperpage{40}
+
+  \indexspace
+
+  \item {operator=}
+    \subitem {Logger}, \hyperpage{18}
+
+  \indexspace
+
+  \item {padZeros}
+    \subitem {AuthManager}, \hyperpage{11}
+  \item {Params}, \hyperpage{19}
+    \subitem {dbFile}, \hyperpage{19}
+    \subitem {logFile}, \hyperpage{20}
+    \subitem {Params}, \hyperpage{19}
+    \subitem {port}, \hyperpage{20}
+  \item {params}
+    \subitem {Interface}, \hyperpage{16}
+  \item {parse}
+    \subitem {Interface}, \hyperpage{15}
+  \item {parseErrors}
+    \subitem {Interface}, \hyperpage{16}
+  \item {parseOptions}
+    \subitem {Interface}, \hyperpage{15}
+  \item {port}
+    \subitem {Params}, \hyperpage{20}
+    \subitem {Server}, \hyperpage{23}
+  \item {printHelp}
+    \subitem {Interface}, \hyperpage{15}
+  \item {printVersion}
+    \subitem {Interface}, \hyperpage{15}
+  \item {processVectors}
+    \subitem {VectorProcessor}, \hyperpage{25}
+  \item {PROGRAM\_NAME}
+    \subitem {Interface.cpp}, \hyperpage{43}
+  \item {PROGRAM\_VERSION}
+    \subitem {Interface.cpp}, \hyperpage{43}
+
+  \indexspace
+
+  \item {receiveText}
+    \subitem {Server}, \hyperpage{21}
+  \item {receiveVector}
+    \subitem {Server}, \hyperpage{22}
+  \item {reset}
+    \subitem {Logger}, \hyperpage{18}
+  \item {run}
+    \subitem {Server}, \hyperpage{22}
+  \item {running}
+    \subitem {Server}, \hyperpage{23}
+
+  \indexspace
+
+  \item {sendResult}
+    \subitem {Server}, \hyperpage{22}
+  \item {sendText}
+    \subitem {Server}, \hyperpage{22}
+  \item {Server}, \hyperpage{20}
+    \subitem {auth}, \hyperpage{22}
+    \subitem {handleClient}, \hyperpage{21}
+    \subitem {logger}, \hyperpage{23}
+    \subitem {port}, \hyperpage{23}
+    \subitem {receiveText}, \hyperpage{21}
+    \subitem {receiveVector}, \hyperpage{22}
+    \subitem {run}, \hyperpage{22}
+    \subitem {running}, \hyperpage{23}
+    \subitem {sendResult}, \hyperpage{22}
+    \subitem {sendText}, \hyperpage{22}
+    \subitem {Server}, \hyperpage{21}
+    \subitem {stop}, \hyperpage{22}
+  \item {server.cpp}, \hyperpage{41}
+  \item {Server.h}, \hyperpage{31, 32}
+  \item {SHA1}, \hyperpage{7}, \hyperpage{23}
+    \subitem {hash}, \hyperpage{23}
+  \item {SHA1.cpp}, \hyperpage{38}
+  \item {SHA1.h}, \hyperpage{28, 29}
+  \item {short\_options}
+    \subitem {Interface.cpp}, \hyperpage{43}
+  \item {stop}
+    \subitem {Server}, \hyperpage{22}
+
+  \indexspace
+
+  \item {userExists}
+    \subitem {AuthManager}, \hyperpage{11}
+  \item {users}
+    \subitem {AuthManager}, \hyperpage{11}
+    \subitem {Database}, \hyperpage{12}
+
+  \indexspace
+
+  \item {validateParams}
+    \subitem {Interface}, \hyperpage{15}
+  \item {validatePort}
+    \subitem {Interface}, \hyperpage{15}
+  \item {VectorProcessor}, \hyperpage{24}
+    \subitem {checkOverflow}, \hyperpage{24}
+    \subitem {computeSumOfSquares}, \hyperpage{24}
+    \subitem {processVectors}, \hyperpage{25}
+  \item {VectorProcessor.cpp}, \hyperpage{41}
+  \item {VectorProcessor.h}, \hyperpage{33, 34}
+  \item {verify}
+    \subitem {Database}, \hyperpage{12}
+  \item {verify\_user}
+    \subitem {database.cpp}, \hyperpage{37}
+  \item {versionRequested}
+    \subitem {Interface}, \hyperpage{16}
+
+  \indexspace
+
+  \item {WARNING}
+    \subitem {Logger.h}, \hyperpage{31}
+
+\end{theindex}

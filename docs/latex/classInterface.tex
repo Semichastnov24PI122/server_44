@@ -1,0 +1,186 @@
+\hypertarget{classInterface}{}\doxysection{Класс Interface}
+\label{classInterface}\index{Interface@{Interface}}
+
+
+Парсер параметров командной строки.  
+
+
+
+
+{\ttfamily \#include $<$Interface.\+h$>$}
+
+
+
+Граф связей класса Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classInterface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_a4406d74c75bdfe150bf72be1f1cda8b1}{Interface}} ()
+\item 
+bool \mbox{\hyperlink{classInterface_a338e1cdc8ebac98cc49c36fd777508b9}{parse}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{structParams}{Params}} \mbox{\hyperlink{classInterface_a1108830b84b28acadc167e128abd2ec1}{get\+Params}} () const
+\item 
+bool \mbox{\hyperlink{classInterface_a025f35fb74e311a1982f3f721ed57cdd}{is\+Help\+Requested}} () const
+\item 
+bool \mbox{\hyperlink{classInterface_a0785e21202c35b796615c55a1b5c956e}{is\+Version\+Requested}} () const
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classInterface_a2040d2f4648ccc8eeec6ea5a89f2b2c5}{get\+Parse\+Errors}} () const
+\item 
+void \mbox{\hyperlink{classInterface_a4887efaf3962df462f13a900143ad10f}{print\+Help}} () const
+\item 
+void \mbox{\hyperlink{classInterface_a368a753f915839c49297deb55d92abbb}{print\+Version}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classInterface_ad72b230ec70d80fc9bdde9f8b974b5c9}{parse\+Options}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+bool \mbox{\hyperlink{classInterface_a5c0331e9613a8fffc4b143311f49d4f0}{validate\+Params}} ()
+\item 
+bool \mbox{\hyperlink{classInterface_af632c94c9618b962cb5997b7db070f32}{validate\+Port}} (int port) const
+\item 
+bool \mbox{\hyperlink{classInterface_a7657bedf44490c23e757204ea9f19d25}{check\+File\+Exists}} (const std\+::string \&filename) const
+\item 
+bool \mbox{\hyperlink{classInterface_a64047f477e479c4e161ae757e9a897e7}{check\+File\+Writable}} (const std\+::string \&filename) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structParams}{Params}} \mbox{\hyperlink{classInterface_a98f3efba14c789b06833cf26c629f7fb}{params}}
+\item 
+bool \mbox{\hyperlink{classInterface_ae2a6690c299318c803b41aaf09122502}{help\+Requested}}
+\item 
+bool \mbox{\hyperlink{classInterface_ab918c5a07f98bcc22a51aba08eb49d76}{version\+Requested}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classInterface_a4381b6aa3ee6b92fcff49486a7cb70b5}{parse\+Errors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Парсер параметров командной строки. 
+
+Обрабатывает аргументы\+: --port, --config, --log, --help. Валидирует номера портов (1024-\/65535) и доступность файлов. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classInterface_a4406d74c75bdfe150bf72be1f1cda8b1}\label{classInterface_a4406d74c75bdfe150bf72be1f1cda8b1}} 
+\index{Interface@{Interface}!Interface@{Interface}}
+\index{Interface@{Interface}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{Interface()}{Interface()}}
+{\footnotesize\ttfamily Interface\+::\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classInterface_a7657bedf44490c23e757204ea9f19d25}\label{classInterface_a7657bedf44490c23e757204ea9f19d25}} 
+\index{Interface@{Interface}!checkFileExists@{checkFileExists}}
+\index{checkFileExists@{checkFileExists}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{checkFileExists()}{checkFileExists()}}
+{\footnotesize\ttfamily bool Interface\+::check\+File\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterface_a64047f477e479c4e161ae757e9a897e7}\label{classInterface_a64047f477e479c4e161ae757e9a897e7}} 
+\index{Interface@{Interface}!checkFileWritable@{checkFileWritable}}
+\index{checkFileWritable@{checkFileWritable}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{checkFileWritable()}{checkFileWritable()}}
+{\footnotesize\ttfamily bool Interface\+::check\+File\+Writable (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterface_a1108830b84b28acadc167e128abd2ec1}\label{classInterface_a1108830b84b28acadc167e128abd2ec1}} 
+\index{Interface@{Interface}!getParams@{getParams}}
+\index{getParams@{getParams}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getParams()}{getParams()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structParams}{Params}} Interface\+::get\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInterface_a2040d2f4648ccc8eeec6ea5a89f2b2c5}\label{classInterface_a2040d2f4648ccc8eeec6ea5a89f2b2c5}} 
+\index{Interface@{Interface}!getParseErrors@{getParseErrors}}
+\index{getParseErrors@{getParseErrors}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getParseErrors()}{getParseErrors()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Interface\+::get\+Parse\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInterface_a025f35fb74e311a1982f3f721ed57cdd}\label{classInterface_a025f35fb74e311a1982f3f721ed57cdd}} 
+\index{Interface@{Interface}!isHelpRequested@{isHelpRequested}}
+\index{isHelpRequested@{isHelpRequested}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{isHelpRequested()}{isHelpRequested()}}
+{\footnotesize\ttfamily bool Interface\+::is\+Help\+Requested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInterface_a0785e21202c35b796615c55a1b5c956e}\label{classInterface_a0785e21202c35b796615c55a1b5c956e}} 
+\index{Interface@{Interface}!isVersionRequested@{isVersionRequested}}
+\index{isVersionRequested@{isVersionRequested}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{isVersionRequested()}{isVersionRequested()}}
+{\footnotesize\ttfamily bool Interface\+::is\+Version\+Requested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInterface_a338e1cdc8ebac98cc49c36fd777508b9}\label{classInterface_a338e1cdc8ebac98cc49c36fd777508b9}} 
+\index{Interface@{Interface}!parse@{parse}}
+\index{parse@{parse}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily bool Interface\+::parse (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInterface_ad72b230ec70d80fc9bdde9f8b974b5c9}\label{classInterface_ad72b230ec70d80fc9bdde9f8b974b5c9}} 
+\index{Interface@{Interface}!parseOptions@{parseOptions}}
+\index{parseOptions@{parseOptions}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{parseOptions()}{parseOptions()}}
+{\footnotesize\ttfamily void Interface\+::parse\+Options (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterface_a4887efaf3962df462f13a900143ad10f}\label{classInterface_a4887efaf3962df462f13a900143ad10f}} 
+\index{Interface@{Interface}!printHelp@{printHelp}}
+\index{printHelp@{printHelp}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{printHelp()}{printHelp()}}
+{\footnotesize\ttfamily void Interface\+::print\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInterface_a368a753f915839c49297deb55d92abbb}\label{classInterface_a368a753f915839c49297deb55d92abbb}} 
+\index{Interface@{Interface}!printVersion@{printVersion}}
+\index{printVersion@{printVersion}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{printVersion()}{printVersion()}}
+{\footnotesize\ttfamily void Interface\+::print\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInterface_a5c0331e9613a8fffc4b143311f49d4f0}\label{classInterface_a5c0331e9613a8fffc4b143311f49d4f0}} 
+\index{Interface@{Interface}!validateParams@{validateParams}}
+\index{validateParams@{validateParams}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{validateParams()}{validateParams()}}
+{\footnotesize\ttfamily bool Interface\+::validate\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterface_af632c94c9618b962cb5997b7db070f32}\label{classInterface_af632c94c9618b962cb5997b7db070f32}} 
+\index{Interface@{Interface}!validatePort@{validatePort}}
+\index{validatePort@{validatePort}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{validatePort()}{validatePort()}}
+{\footnotesize\ttfamily bool Interface\+::validate\+Port (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classInterface_ae2a6690c299318c803b41aaf09122502}\label{classInterface_ae2a6690c299318c803b41aaf09122502}} 
+\index{Interface@{Interface}!helpRequested@{helpRequested}}
+\index{helpRequested@{helpRequested}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{helpRequested}{helpRequested}}
+{\footnotesize\ttfamily bool Interface\+::help\+Requested\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterface_a98f3efba14c789b06833cf26c629f7fb}\label{classInterface_a98f3efba14c789b06833cf26c629f7fb}} 
+\index{Interface@{Interface}!params@{params}}
+\index{params@{params}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structParams}{Params}} Interface\+::params\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterface_a4381b6aa3ee6b92fcff49486a7cb70b5}\label{classInterface_a4381b6aa3ee6b92fcff49486a7cb70b5}} 
+\index{Interface@{Interface}!parseErrors@{parseErrors}}
+\index{parseErrors@{parseErrors}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{parseErrors}{parseErrors}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Interface\+::parse\+Errors\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterface_ab918c5a07f98bcc22a51aba08eb49d76}\label{classInterface_ab918c5a07f98bcc22a51aba08eb49d76}} 
+\index{Interface@{Interface}!versionRequested@{versionRequested}}
+\index{versionRequested@{versionRequested}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{versionRequested}{versionRequested}}
+{\footnotesize\ttfamily bool Interface\+::version\+Requested\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Interface_8h}{Interface.\+h}}\item 
+\mbox{\hyperlink{Interface_8cpp}{Interface.\+cpp}}\end{DoxyCompactItemize}

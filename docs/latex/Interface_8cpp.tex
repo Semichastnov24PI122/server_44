@@ -1,0 +1,84 @@
+\hypertarget{Interface_8cpp}{}\doxysection{Файл Interface.\+cpp}
+\label{Interface_8cpp}\index{Interface.cpp@{Interface.cpp}}
+
+
+Реализация парсера командной строки.  
+
+
+{\ttfamily \#include \char`\"{}utils/\+Interface.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$getopt.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+Граф включаемых заголовочных файлов для Interface.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Interface_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Interface_8cpp_a2f10abd650e471fae2d7e8c63d41206a}{PROGRAM\+\_\+\+VERSION}}~\char`\"{}1.\+0.\+0\char`\"{}
+\item 
+\#define \mbox{\hyperlink{Interface_8cpp_a3b6a35b8be8405a9db72cc5dea97954b}{PROGRAM\+\_\+\+NAME}}~\char`\"{}vcalc\+\_\+server\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+static struct option \mbox{\hyperlink{Interface_8cpp_ab5b68aa8f898c499ca2c3092ecd9e552}{long\+\_\+options}} \mbox{[}$\,$\mbox{]}
+\item 
+const char $\ast$ \mbox{\hyperlink{Interface_8cpp_a71aa943eb14861f9bd288cc880231e32}{short\+\_\+options}} = \char`\"{}hvc\+:l\+:p\+:\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Реализация парсера командной строки. 
+
+Разбор аргументов с использованием getopt\+\_\+long. Валидация портов, проверка существования файлов. 
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{Interface_8cpp_a3b6a35b8be8405a9db72cc5dea97954b}\label{Interface_8cpp_a3b6a35b8be8405a9db72cc5dea97954b}} 
+\index{Interface.cpp@{Interface.cpp}!PROGRAM\_NAME@{PROGRAM\_NAME}}
+\index{PROGRAM\_NAME@{PROGRAM\_NAME}!Interface.cpp@{Interface.cpp}}
+\doxysubsubsection{\texorpdfstring{PROGRAM\_NAME}{PROGRAM\_NAME}}
+{\footnotesize\ttfamily \#define PROGRAM\+\_\+\+NAME~\char`\"{}vcalc\+\_\+server\char`\"{}}
+
+\mbox{\Hypertarget{Interface_8cpp_a2f10abd650e471fae2d7e8c63d41206a}\label{Interface_8cpp_a2f10abd650e471fae2d7e8c63d41206a}} 
+\index{Interface.cpp@{Interface.cpp}!PROGRAM\_VERSION@{PROGRAM\_VERSION}}
+\index{PROGRAM\_VERSION@{PROGRAM\_VERSION}!Interface.cpp@{Interface.cpp}}
+\doxysubsubsection{\texorpdfstring{PROGRAM\_VERSION}{PROGRAM\_VERSION}}
+{\footnotesize\ttfamily \#define PROGRAM\+\_\+\+VERSION~\char`\"{}1.\+0.\+0\char`\"{}}
+
+
+
+\doxysubsection{Переменные}
+\mbox{\Hypertarget{Interface_8cpp_ab5b68aa8f898c499ca2c3092ecd9e552}\label{Interface_8cpp_ab5b68aa8f898c499ca2c3092ecd9e552}} 
+\index{Interface.cpp@{Interface.cpp}!long\_options@{long\_options}}
+\index{long\_options@{long\_options}!Interface.cpp@{Interface.cpp}}
+\doxysubsubsection{\texorpdfstring{long\_options}{long\_options}}
+{\footnotesize\ttfamily struct option long\+\_\+options\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}help"{}},    no\_argument,       0, \textcolor{charliteral}{'h'}\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}version"{}}, no\_argument,       0, \textcolor{charliteral}{'v'}\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}config"{}},  required\_argument, 0, \textcolor{charliteral}{'c'}\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}log"{}},     required\_argument, 0, \textcolor{charliteral}{'l'}\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}port"{}},    required\_argument, 0, \textcolor{charliteral}{'p'}\},}
+\DoxyCodeLine{    \{0, 0, 0, 0\}  }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Interface_8cpp_a71aa943eb14861f9bd288cc880231e32}\label{Interface_8cpp_a71aa943eb14861f9bd288cc880231e32}} 
+\index{Interface.cpp@{Interface.cpp}!short\_options@{short\_options}}
+\index{short\_options@{short\_options}!Interface.cpp@{Interface.cpp}}
+\doxysubsubsection{\texorpdfstring{short\_options}{short\_options}}
+{\footnotesize\ttfamily const char$\ast$ short\+\_\+options = \char`\"{}hvc\+:l\+:p\+:\char`\"{}}
+

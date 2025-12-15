@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Сервер аутентификации и векторных вычислений: Файл Interface.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Сервер аутентификации и векторных вычислений<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Курсовая работа по ТиМП. Сетевой сервер с аутентификацией по SHA-1 и вычислением суммы квадратов векторов.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Interface_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл Interface.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Реализация парсера командной строки.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="Interface_8h_source.html">utils/Interface.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;getopt.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для Interface.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="Interface_8cpp__incl.png" border="0" usemap="#aInterface_8cpp" alt=""/></div>
+<map name="aInterface_8cpp" id="aInterface_8cpp">
+<area shape="rect" title="Реализация парсера командной строки." alt="" coords="392,5,499,32"/>
+<area shape="rect" href="Interface_8h.html" title=" " alt="" coords="15,80,139,107"/>
+<area shape="rect" title=" " alt="" coords="164,80,244,107"/>
+<area shape="rect" title=" " alt="" coords="269,80,342,107"/>
+<area shape="rect" title=" " alt="" coords="367,80,433,107"/>
+<area shape="rect" title=" " alt="" coords="458,80,523,107"/>
+<area shape="rect" title=" " alt="" coords="548,80,623,107"/>
+<area shape="rect" title=" " alt="" coords="647,80,723,107"/>
+<area shape="rect" title=" " alt="" coords="748,80,833,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,64,181"/>
+<area shape="rect" title=" " alt="" coords="89,155,151,181"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a2f10abd650e471fae2d7e8c63d41206a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Interface_8cpp.html#a2f10abd650e471fae2d7e8c63d41206a">PROGRAM_VERSION</a>&#160;&#160;&#160;&quot;1.0.0&quot;</td></tr>
+<tr class="separator:a2f10abd650e471fae2d7e8c63d41206a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6a35b8be8405a9db72cc5dea97954b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Interface_8cpp.html#a3b6a35b8be8405a9db72cc5dea97954b">PROGRAM_NAME</a>&#160;&#160;&#160;&quot;vcalc_server&quot;</td></tr>
+<tr class="separator:a3b6a35b8be8405a9db72cc5dea97954b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ab5b68aa8f898c499ca2c3092ecd9e552"><td class="memItemLeft" align="right" valign="top">static struct option&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Interface_8cpp.html#ab5b68aa8f898c499ca2c3092ecd9e552">long_options</a> []</td></tr>
+<tr class="separator:ab5b68aa8f898c499ca2c3092ecd9e552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71aa943eb14861f9bd288cc880231e32"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Interface_8cpp.html#a71aa943eb14861f9bd288cc880231e32">short_options</a> = &quot;hvc:l:p:&quot;</td></tr>
+<tr class="separator:a71aa943eb14861f9bd288cc880231e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Реализация парсера командной строки. </p>
+<p >Разбор аргументов с использованием getopt_long. Валидация портов, проверка существования файлов. </p>
+</div><h2 class="groupheader">Макросы</h2>
+<a id="a3b6a35b8be8405a9db72cc5dea97954b" name="a3b6a35b8be8405a9db72cc5dea97954b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6a35b8be8405a9db72cc5dea97954b">&#9670;&nbsp;</a></span>PROGRAM_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROGRAM_NAME&#160;&#160;&#160;&quot;vcalc_server&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f10abd650e471fae2d7e8c63d41206a" name="a2f10abd650e471fae2d7e8c63d41206a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f10abd650e471fae2d7e8c63d41206a">&#9670;&nbsp;</a></span>PROGRAM_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROGRAM_VERSION&#160;&#160;&#160;&quot;1.0.0&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="ab5b68aa8f898c499ca2c3092ecd9e552" name="ab5b68aa8f898c499ca2c3092ecd9e552"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b68aa8f898c499ca2c3092ecd9e552">&#9670;&nbsp;</a></span>long_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct option long_options[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<span class="stringliteral">&quot;help&quot;</span>,    no_argument,       0, <span class="charliteral">&#39;h&#39;</span>},</div>
+<div class="line">    {<span class="stringliteral">&quot;version&quot;</span>, no_argument,       0, <span class="charliteral">&#39;v&#39;</span>},</div>
+<div class="line">    {<span class="stringliteral">&quot;config&quot;</span>,  required_argument, 0, <span class="charliteral">&#39;c&#39;</span>},</div>
+<div class="line">    {<span class="stringliteral">&quot;log&quot;</span>,     required_argument, 0, <span class="charliteral">&#39;l&#39;</span>},</div>
+<div class="line">    {<span class="stringliteral">&quot;port&quot;</span>,    required_argument, 0, <span class="charliteral">&#39;p&#39;</span>},</div>
+<div class="line">    {0, 0, 0, 0}  </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a71aa943eb14861f9bd288cc880231e32" name="a71aa943eb14861f9bd288cc880231e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71aa943eb14861f9bd288cc880231e32">&#9670;&nbsp;</a></span>short_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* short_options = &quot;hvc:l:p:&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li><li class="navelem"><a class="el" href="Interface_8cpp.html">Interface.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

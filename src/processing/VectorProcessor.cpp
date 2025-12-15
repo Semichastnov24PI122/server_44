@@ -1,3 +1,10 @@
+/**
+ * @file VectorProcessor.cpp
+ * @brief Реализация обработчика векторов.
+ *
+ * Вычисление суммы квадратов с контролем переполнения.
+ * Обработка векторов в двоичном формате.
+ */
 #include "processing/VectorProcessor.h"
 #include <cstdint>
 #include <climits>

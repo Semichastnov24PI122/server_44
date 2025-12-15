@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Сервер аутентификации и векторных вычислений: Файл database.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Сервер аутентификации и векторных вычислений<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Курсовая работа по ТиМП. Сетевой сервер с аутентификацией по SHA-1 и вычислением суммы квадратов векторов.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('database_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл database.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="AuthManager_8h_source.html">auth/AuthManager.h</a>&quot;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для database.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="database_8cpp__incl.png" border="0" usemap="#adatabase_8cpp" alt=""/></div>
+<map name="adatabase_8cpp" id="adatabase_8cpp">
+<area shape="rect" title=" " alt="" coords="263,5,373,32"/>
+<area shape="rect" href="AuthManager_8h.html" title=" " alt="" coords="5,80,159,107"/>
+<area shape="rect" title=" " alt="" coords="183,80,256,107"/>
+<area shape="rect" title=" " alt="" coords="281,80,355,107"/>
+<area shape="rect" title=" " alt="" coords="379,80,459,107"/>
+<area shape="rect" title=" " alt="" coords="483,80,569,107"/>
+<area shape="rect" title=" " alt="" coords="14,155,73,181"/>
+<area shape="rect" title=" " alt="" coords="97,155,147,181"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html">Database</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a9842a5373033ac7161cae0b13b06720d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8cpp.html#a9842a5373033ac7161cae0b13b06720d">load_user_database</a> (const std::string &amp;filename, std::map&lt; std::string, std::string &gt; &amp;users)</td></tr>
+<tr class="separator:a9842a5373033ac7161cae0b13b06720d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa116912d401ab522225bbab3fdbd806f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8cpp.html#aa116912d401ab522225bbab3fdbd806f">verify_user</a> (const std::map&lt; std::string, std::string &gt; &amp;users, const std::string &amp;user, const std::string &amp;hash)</td></tr>
+<tr class="separator:aa116912d401ab522225bbab3fdbd806f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f180cce555d6fe119280343f524efc"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8cpp.html#a74f180cce555d6fe119280343f524efc">count_users</a> (const std::map&lt; std::string, std::string &gt; &amp;users)</td></tr>
+<tr class="separator:a74f180cce555d6fe119280343f524efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797ece49cd498df086de7a6c3f3222c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8cpp.html#a797ece49cd498df086de7a6c3f3222c5">add_user_to_db</a> (std::map&lt; std::string, std::string &gt; &amp;users, const std::string &amp;user, const std::string &amp;hash)</td></tr>
+<tr class="separator:a797ece49cd498df086de7a6c3f3222c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a797ece49cd498df086de7a6c3f3222c5" name="a797ece49cd498df086de7a6c3f3222c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a797ece49cd498df086de7a6c3f3222c5">&#9670;&nbsp;</a></span>add_user_to_db()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_user_to_db </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>users</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74f180cce555d6fe119280343f524efc" name="a74f180cce555d6fe119280343f524efc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f180cce555d6fe119280343f524efc">&#9670;&nbsp;</a></span>count_users()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t count_users </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>users</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9842a5373033ac7161cae0b13b06720d" name="a9842a5373033ac7161cae0b13b06720d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9842a5373033ac7161cae0b13b06720d">&#9670;&nbsp;</a></span>load_user_database()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool load_user_database </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>users</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa116912d401ab522225bbab3fdbd806f" name="aa116912d401ab522225bbab3fdbd806f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa116912d401ab522225bbab3fdbd806f">&#9670;&nbsp;</a></span>verify_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool verify_user </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>users</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="database_8cpp.html">database.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

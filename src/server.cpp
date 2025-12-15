@@ -1,3 +1,10 @@
+/**
+ * @file server.cpp
+ * @brief Реализация класса Server.
+ *
+ * Создание TCP-сокета, привязка порта, цикл приема подключений.
+ * Управление сессиями клиентов и обработка сетевых ошибок.
+ */
 #include "network/Server.h"
 #include "auth/AuthManager.h"
 #include "logger/Logger.h"

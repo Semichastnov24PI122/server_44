@@ -1,0 +1,55 @@
+\hypertarget{classVectorProcessor}{}\doxysection{Класс Vector\+Processor}
+\label{classVectorProcessor}\index{VectorProcessor@{VectorProcessor}}
+
+
+Обработчик числовых векторов.  
+
+
+
+
+{\ttfamily \#include $<$Vector\+Processor.\+h$>$}
+
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classVectorProcessor_a714e7e3aa9a61d056775e56910b4d958}{compute\+Sum\+Of\+Squares}} (const std\+::vector$<$ uint32\+\_\+t $>$ \&vector)
+\item 
+static std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classVectorProcessor_a88b1e2afdf699e3000695744586dae32}{process\+Vectors}} (const std\+::vector$<$ std\+::vector$<$ uint32\+\_\+t $>$ $>$ \&vectors)
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classVectorProcessor_a24bc496aba78bd3f343726fdf2b3cba4}{check\+Overflow}} (uint64\+\_\+t value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Обработчик числовых векторов. 
+
+Вычисляет сумму квадратов элементов вектора. Обрабатывает переполнение (возвращает UINT32\+\_\+\+MAX при переполнении). 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classVectorProcessor_a24bc496aba78bd3f343726fdf2b3cba4}\label{classVectorProcessor_a24bc496aba78bd3f343726fdf2b3cba4}} 
+\index{VectorProcessor@{VectorProcessor}!checkOverflow@{checkOverflow}}
+\index{checkOverflow@{checkOverflow}!VectorProcessor@{VectorProcessor}}
+\doxysubsubsection{\texorpdfstring{checkOverflow()}{checkOverflow()}}
+{\footnotesize\ttfamily uint32\+\_\+t Vector\+Processor\+::check\+Overflow (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classVectorProcessor_a714e7e3aa9a61d056775e56910b4d958}\label{classVectorProcessor_a714e7e3aa9a61d056775e56910b4d958}} 
+\index{VectorProcessor@{VectorProcessor}!computeSumOfSquares@{computeSumOfSquares}}
+\index{computeSumOfSquares@{computeSumOfSquares}!VectorProcessor@{VectorProcessor}}
+\doxysubsubsection{\texorpdfstring{computeSumOfSquares()}{computeSumOfSquares()}}
+{\footnotesize\ttfamily uint32\+\_\+t Vector\+Processor\+::compute\+Sum\+Of\+Squares (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classVectorProcessor_a88b1e2afdf699e3000695744586dae32}\label{classVectorProcessor_a88b1e2afdf699e3000695744586dae32}} 
+\index{VectorProcessor@{VectorProcessor}!processVectors@{processVectors}}
+\index{processVectors@{processVectors}!VectorProcessor@{VectorProcessor}}
+\doxysubsubsection{\texorpdfstring{processVectors()}{processVectors()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint32\+\_\+t $>$ Vector\+Processor\+::process\+Vectors (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ uint32\+\_\+t $>$ $>$ \&}]{vectors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{VectorProcessor_8h}{Vector\+Processor.\+h}}\item 
+\mbox{\hyperlink{VectorProcessor_8cpp}{Vector\+Processor.\+cpp}}\end{DoxyCompactItemize}

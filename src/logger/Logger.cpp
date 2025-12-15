@@ -1,3 +1,10 @@
+/**
+ * @file Logger.cpp
+ * @brief Реализация логгера.
+ *
+ * Запись сообщений в файл с временными метками.
+ * Потокобезопасная реализация, уровни логирования.
+ */
 #include "logger/Logger.h"
 #include <fstream>
 #include <iostream>

@@ -1,0 +1,40 @@
+\hypertarget{Logger_8h_source}{}\doxysection{Logger.\+h}
+\label{Logger_8h_source}\index{Logger.h@{Logger.h}}
+\mbox{\hyperlink{Logger_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef LOGGER\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define LOGGER\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{enum class} \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9}{LogLevel}} \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3}{INFO}},}
+\DoxyCodeLine{15     \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a059e9861e0400dfbe05c98a841f3f96b}{WARNING}},    \textcolor{comment}{// Добавляем WARNING}}
+\DoxyCodeLine{16     \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}},}
+\DoxyCodeLine{17     \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}}}
+\DoxyCodeLine{18 \};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{classLogger}{Logger}} \{}
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     \textcolor{keyword}{static} \mbox{\hyperlink{classLogger}{Logger}}* \mbox{\hyperlink{classLogger_a5e9fd267cd621afeb1201131071425ea}{instance}};  \textcolor{comment}{// Добавляем static declaration}}
+\DoxyCodeLine{23     std::string \mbox{\hyperlink{classLogger_a6ab2eb5944e4146d541591783a74e7d6}{logFile}};      \textcolor{comment}{// Добавляем переменную}}
+\DoxyCodeLine{24     }
+\DoxyCodeLine{25     \mbox{\hyperlink{classLogger_abc41bfb031d896170c7675fa96a6b30c}{Logger}}();                  \textcolor{comment}{// Приватный конструктор}}
+\DoxyCodeLine{26     \mbox{\hyperlink{classLogger_add0f34d4c753c86af8074840a72366b3}{Logger}}(\textcolor{keyword}{const} \mbox{\hyperlink{classLogger}{Logger}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{27     \mbox{\hyperlink{classLogger}{Logger}}\& \mbox{\hyperlink{classLogger_a8c0ca770cdc91ca9fc3015286568e1ea}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classLogger}{Logger}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{28     }
+\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     \textcolor{keyword}{static} \mbox{\hyperlink{classLogger}{Logger}}\& \mbox{\hyperlink{classLogger_acebb37f5538780e6c14f13de6ec497bc}{getInstance}}();}
+\DoxyCodeLine{31     }
+\DoxyCodeLine{32     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classLogger_afcaee25f0f37b6d6b7bdc467d493bfbd}{initialize}}(\textcolor{keyword}{const} std::string\& filename);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classLogger_a00490686e9c59f2b860698a170a275e8}{log}}(\mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9}{LogLevel}} level, \textcolor{keyword}{const} std::string\& message, }
+\DoxyCodeLine{34              \textcolor{keyword}{const} std::string\& params = \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{classLogger_a704c81ebcc3a014043402d78b9119b09}{reset}}();}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{37     \mbox{\hyperlink{classLogger_a81414467aac1f8740c5bd13624f3aa0b}{\string~Logger}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

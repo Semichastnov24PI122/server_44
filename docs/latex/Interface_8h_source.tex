@@ -1,0 +1,72 @@
+\hypertarget{Interface_8h_source}{}\doxysection{Interface.\+h}
+\label{Interface_8h_source}\index{Interface.h@{Interface.h}}
+\mbox{\hyperlink{Interface_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef INTERFACE\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define INTERFACE\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{comment}{// Структура для хранения параметров командной строки}}
+\DoxyCodeLine{15 \textcolor{keyword}{struct }\mbox{\hyperlink{structParams}{Params}} \{}
+\DoxyCodeLine{16     std::string \mbox{\hyperlink{structParams_a6f4d509e8e2f912cf54499c614fc521c}{dbFile}};      \textcolor{comment}{// Файл базы данных пользователей}}
+\DoxyCodeLine{17     std::string \mbox{\hyperlink{structParams_a0df9a020ab892dd684833c2ec4c2f41c}{logFile}};     \textcolor{comment}{// Файл журнала}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} \mbox{\hyperlink{structParams_af2b6bf05246b2e046b8c107d441beac9}{port}};                \textcolor{comment}{// Порт сервера}}
+\DoxyCodeLine{19     }
+\DoxyCodeLine{20     \mbox{\hyperlink{structParams_a1c0d445a3ea36e3b4d8696c55217fdd2}{Params}}() : \mbox{\hyperlink{structParams_a6f4d509e8e2f912cf54499c614fc521c}{dbFile}}(\textcolor{stringliteral}{"{}/etc/vcalc.conf"{}}), \mbox{\hyperlink{structParams_a0df9a020ab892dd684833c2ec4c2f41c}{logFile}}(\textcolor{stringliteral}{"{}/var/log/vcalc.log"{}}), \mbox{\hyperlink{structParams_af2b6bf05246b2e046b8c107d441beac9}{port}}(33333) \{\}}
+\DoxyCodeLine{21 \};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{comment}{// Класс для разбора и валидации параметров командной строки}}
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{classInterface}{Interface}} \{}
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{26     \mbox{\hyperlink{structParams}{Params}} \mbox{\hyperlink{classInterface_a98f3efba14c789b06833cf26c629f7fb}{params}};}
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classInterface_ae2a6690c299318c803b41aaf09122502}{helpRequested}};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classInterface_ab918c5a07f98bcc22a51aba08eb49d76}{versionRequested}};}
+\DoxyCodeLine{29     std::vector<std::string> \mbox{\hyperlink{classInterface_a4381b6aa3ee6b92fcff49486a7cb70b5}{parseErrors}};}
+\DoxyCodeLine{30     }
+\DoxyCodeLine{31     \textcolor{comment}{// Парсинг опций командной строки с использованием getopt\_long}}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classInterface_ad72b230ec70d80fc9bdde9f8b974b5c9}{parseOptions}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}* argv[]);}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34     \textcolor{comment}{// Валидация разобранных параметров}}
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classInterface_a5c0331e9613a8fffc4b143311f49d4f0}{validateParams}}();}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{37     \textcolor{comment}{// Проверка валидности номера порта}}
+\DoxyCodeLine{38     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classInterface_af632c94c9618b962cb5997b7db070f32}{validatePort}}(\textcolor{keywordtype}{int} port) \textcolor{keyword}{const};}
+\DoxyCodeLine{39     }
+\DoxyCodeLine{40     \textcolor{comment}{// Проверка существования файла}}
+\DoxyCodeLine{41     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classInterface_a7657bedf44490c23e757204ea9f19d25}{checkFileExists}}(\textcolor{keyword}{const} std::string\& filename) \textcolor{keyword}{const};}
+\DoxyCodeLine{42     }
+\DoxyCodeLine{43     \textcolor{comment}{// Проверка возможности записи в файл}}
+\DoxyCodeLine{44     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classInterface_a64047f477e479c4e161ae757e9a897e7}{checkFileWritable}}(\textcolor{keyword}{const} std::string\& filename) \textcolor{keyword}{const};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{public}:}
+\DoxyCodeLine{47     \textcolor{comment}{// Конструктор по умолчанию}}
+\DoxyCodeLine{48     \mbox{\hyperlink{classInterface_a4406d74c75bdfe150bf72be1f1cda8b1}{Interface}}();}
+\DoxyCodeLine{49     }
+\DoxyCodeLine{50     \textcolor{comment}{// Разбор аргументов командной строки}}
+\DoxyCodeLine{51     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classInterface_a338e1cdc8ebac98cc49c36fd777508b9}{parse}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}* argv[]);}
+\DoxyCodeLine{52     }
+\DoxyCodeLine{53     \textcolor{comment}{// Получение разобранных параметров}}
+\DoxyCodeLine{54     \mbox{\hyperlink{structParams}{Params}} \mbox{\hyperlink{classInterface_a1108830b84b28acadc167e128abd2ec1}{getParams}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{55     }
+\DoxyCodeLine{56     \textcolor{comment}{// Проверка запроса справки}}
+\DoxyCodeLine{57     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classInterface_a025f35fb74e311a1982f3f721ed57cdd}{isHelpRequested}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{58     }
+\DoxyCodeLine{59     \textcolor{comment}{// Проверка запроса версии}}
+\DoxyCodeLine{60     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classInterface_a0785e21202c35b796615c55a1b5c956e}{isVersionRequested}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{61     }
+\DoxyCodeLine{62     \textcolor{comment}{// Получение ошибок парсинга}}
+\DoxyCodeLine{63     std::vector<std::string> \mbox{\hyperlink{classInterface_a2040d2f4648ccc8eeec6ea5a89f2b2c5}{getParseErrors}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{64     }
+\DoxyCodeLine{65     \textcolor{comment}{// Вывод справки по использованию программы}}
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{classInterface_a4887efaf3962df462f13a900143ad10f}{printHelp}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{67     }
+\DoxyCodeLine{68     \textcolor{comment}{// Вывод информации о версии программы}}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} \mbox{\hyperlink{classInterface_a368a753f915839c49297deb55d92abbb}{printVersion}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{70 \};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INTERFACE\_H}}
+
+\end{DoxyCode}

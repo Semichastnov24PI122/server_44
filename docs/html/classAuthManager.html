@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Сервер аутентификации и векторных вычислений: Класс AuthManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Сервер аутентификации и векторных вычислений<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Курсовая работа по ТиМП. Сетевой сервер с аутентификацией по SHA-1 и вычислением суммы квадратов векторов.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAuthManager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classAuthManager-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс AuthManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Менеджер аутентификации пользователей.  
+ <a href="classAuthManager.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="AuthManager_8h_source.html">AuthManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa41d64c2eaf8c67cc6328065cbf4ffc1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#aa41d64c2eaf8c67cc6328065cbf4ffc1">AuthManager</a> ()=default</td></tr>
+<tr class="separator:aa41d64c2eaf8c67cc6328065cbf4ffc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5843bd1ad5fc0ae9d72dcfa70cdab1cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a5843bd1ad5fc0ae9d72dcfa70cdab1cc">~AuthManager</a> ()=default</td></tr>
+<tr class="separator:a5843bd1ad5fc0ae9d72dcfa70cdab1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6d31be99f4008906f1414d9c5a2ed9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#acf6d31be99f4008906f1414d9c5a2ed9">loadUserDatabase</a> (const std::string &amp;filename)</td></tr>
+<tr class="separator:acf6d31be99f4008906f1414d9c5a2ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab37629ad9af4e8242d2473c5c55d89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a8ab37629ad9af4e8242d2473c5c55d89">userExists</a> (const std::string &amp;username)</td></tr>
+<tr class="separator:a8ab37629ad9af4e8242d2473c5c55d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64de0bded581de46e0ca212673a577e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a64de0bded581de46e0ca212673a577e4">authenticate</a> (const std::string &amp;username, const std::string &amp;salt, const std::string &amp;clientHash)</td></tr>
+<tr class="separator:a64de0bded581de46e0ca212673a577e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a577d1623e68426287445011319063564"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a577d1623e68426287445011319063564">addUser</a> (const std::string &amp;username, const std::string &amp;passwordHash)</td></tr>
+<tr class="separator:a577d1623e68426287445011319063564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d53ad75b29c1b6fcc83f935e68a757"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#ae8d53ad75b29c1b6fcc83f935e68a757">generateSalt64</a> ()</td></tr>
+<tr class="separator:ae8d53ad75b29c1b6fcc83f935e68a757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a122971de4c1531785a9c8878a233cece"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a122971de4c1531785a9c8878a233cece">padZeros</a> (const std::string &amp;str, size_t length)</td></tr>
+<tr class="separator:a122971de4c1531785a9c8878a233cece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab869bc61d17ee18c394b299dc23b9dae"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#ab869bc61d17ee18c394b299dc23b9dae">computeSHA1</a> (const std::string &amp;salt, const std::string &amp;password)</td></tr>
+<tr class="separator:ab869bc61d17ee18c394b299dc23b9dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:ae5f3139f20f2ae23f8a887c8f68633cc"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#ae5f3139f20f2ae23f8a887c8f68633cc">users</a></td></tr>
+<tr class="separator:ae5f3139f20f2ae23f8a887c8f68633cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Менеджер аутентификации пользователей. </p>
+<p >Загружает базу пользователей из файла, проверяет логины и хеши паролей. Использует схему аутентификации SHA-1 с 64-битной солью от клиента. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa41d64c2eaf8c67cc6328065cbf4ffc1" name="aa41d64c2eaf8c67cc6328065cbf4ffc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa41d64c2eaf8c67cc6328065cbf4ffc1">&#9670;&nbsp;</a></span>AuthManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AuthManager::AuthManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5843bd1ad5fc0ae9d72dcfa70cdab1cc" name="a5843bd1ad5fc0ae9d72dcfa70cdab1cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5843bd1ad5fc0ae9d72dcfa70cdab1cc">&#9670;&nbsp;</a></span>~AuthManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AuthManager::~AuthManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a577d1623e68426287445011319063564" name="a577d1623e68426287445011319063564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a577d1623e68426287445011319063564">&#9670;&nbsp;</a></span>addUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AuthManager::addUser </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>passwordHash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64de0bded581de46e0ca212673a577e4" name="a64de0bded581de46e0ca212673a577e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64de0bded581de46e0ca212673a577e4">&#9670;&nbsp;</a></span>authenticate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AuthManager::authenticate </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>salt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>clientHash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab869bc61d17ee18c394b299dc23b9dae" name="ab869bc61d17ee18c394b299dc23b9dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab869bc61d17ee18c394b299dc23b9dae">&#9670;&nbsp;</a></span>computeSHA1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string AuthManager::computeSHA1 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>salt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8d53ad75b29c1b6fcc83f935e68a757" name="ae8d53ad75b29c1b6fcc83f935e68a757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d53ad75b29c1b6fcc83f935e68a757">&#9670;&nbsp;</a></span>generateSalt64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string AuthManager::generateSalt64 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf6d31be99f4008906f1414d9c5a2ed9" name="acf6d31be99f4008906f1414d9c5a2ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf6d31be99f4008906f1414d9c5a2ed9">&#9670;&nbsp;</a></span>loadUserDatabase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AuthManager::loadUserDatabase </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a122971de4c1531785a9c8878a233cece" name="a122971de4c1531785a9c8878a233cece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a122971de4c1531785a9c8878a233cece">&#9670;&nbsp;</a></span>padZeros()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string AuthManager::padZeros </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ab37629ad9af4e8242d2473c5c55d89" name="a8ab37629ad9af4e8242d2473c5c55d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab37629ad9af4e8242d2473c5c55d89">&#9670;&nbsp;</a></span>userExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AuthManager::userExists </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>username</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ae5f3139f20f2ae23f8a887c8f68633cc" name="ae5f3139f20f2ae23f8a887c8f68633cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f3139f20f2ae23f8a887c8f68633cc">&#9670;&nbsp;</a></span>users</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, std::string&gt; AuthManager::users</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="AuthManager_8h_source.html">AuthManager.h</a></li>
+<li><a class="el" href="AuthManager_8cpp.html">AuthManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAuthManager.html">AuthManager</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

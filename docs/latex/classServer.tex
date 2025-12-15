@@ -1,0 +1,146 @@
+\hypertarget{classServer}{}\doxysection{Класс Server}
+\label{classServer}\index{Server@{Server}}
+
+
+Основной класс сетевого сервера.  
+
+
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
+
+
+Граф связей класса Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classServer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServer_a9a007f930773fa65802480e732c72971}{Server}} (int \mbox{\hyperlink{classServer_a926c9dae229a62b6d33fdbb41dca6d82}{port}}, \mbox{\hyperlink{classAuthManager}{Auth\+Manager}} \&\mbox{\hyperlink{classServer_a1a47cfa76e5b97e9fc6412825775d1ba}{auth}}, \mbox{\hyperlink{classLogger}{Logger}} \&\mbox{\hyperlink{classServer_a3c1f558b24a485a61822b50d3a02192a}{logger}})
+\item 
+void \mbox{\hyperlink{classServer_abb27d30b40a94326e3fd629d3b30b7d5}{run}} ()
+\item 
+void \mbox{\hyperlink{classServer_a07c45a7e101a3926d8f9685c3c5d14e4}{stop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classServer_a1e0e064acb019cbe4c022857eed95a77}{handle\+Client}} (int client\+Socket)
+\item 
+std\+::string \mbox{\hyperlink{classServer_ac3030c84799aaf940198d0a0070c67fc}{receive\+Text}} (int socket)
+\item 
+bool \mbox{\hyperlink{classServer_a6d12421c4ff7304b471015bc33ce13fa}{send\+Text}} (int socket, const std\+::string \&text)
+\item 
+std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classServer_a77b4723608950c6a5104848fc0d01668}{receive\+Vector}} (int socket)
+\item 
+bool \mbox{\hyperlink{classServer_ad28c23eef4764ef4f4a140ba1f828a2c}{send\+Result}} (int socket, uint32\+\_\+t result)
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classServer_a926c9dae229a62b6d33fdbb41dca6d82}{port}}
+\item 
+\mbox{\hyperlink{classAuthManager}{Auth\+Manager}} \& \mbox{\hyperlink{classServer_a1a47cfa76e5b97e9fc6412825775d1ba}{auth}}
+\item 
+\mbox{\hyperlink{classLogger}{Logger}} \& \mbox{\hyperlink{classServer_a3c1f558b24a485a61822b50d3a02192a}{logger}}
+\item 
+bool \mbox{\hyperlink{classServer_a4db32e1a16e0423cf619d7914fa9b8c2}{running}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Основной класс сетевого сервера. 
+
+Устанавливает TCP-\/сокет, ожидает подключений клиентов. Создает сессии клиентов, координирует аутентификацию и обработку данных. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classServer_a9a007f930773fa65802480e732c72971}\label{classServer_a9a007f930773fa65802480e732c72971}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{\mbox{\hyperlink{classAuthManager}{Auth\+Manager}} \&}]{auth,  }\item[{\mbox{\hyperlink{classLogger}{Logger}} \&}]{logger }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classServer_a1e0e064acb019cbe4c022857eed95a77}\label{classServer_a1e0e064acb019cbe4c022857eed95a77}} 
+\index{Server@{Server}!handleClient@{handleClient}}
+\index{handleClient@{handleClient}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{handleClient()}{handleClient()}}
+{\footnotesize\ttfamily void Server\+::handle\+Client (\begin{DoxyParamCaption}\item[{int}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classServer_ac3030c84799aaf940198d0a0070c67fc}\label{classServer_ac3030c84799aaf940198d0a0070c67fc}} 
+\index{Server@{Server}!receiveText@{receiveText}}
+\index{receiveText@{receiveText}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{receiveText()}{receiveText()}}
+{\footnotesize\ttfamily std\+::string Server\+::receive\+Text (\begin{DoxyParamCaption}\item[{int}]{socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classServer_a77b4723608950c6a5104848fc0d01668}\label{classServer_a77b4723608950c6a5104848fc0d01668}} 
+\index{Server@{Server}!receiveVector@{receiveVector}}
+\index{receiveVector@{receiveVector}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{receiveVector()}{receiveVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint32\+\_\+t $>$ Server\+::receive\+Vector (\begin{DoxyParamCaption}\item[{int}]{socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classServer_abb27d30b40a94326e3fd629d3b30b7d5}\label{classServer_abb27d30b40a94326e3fd629d3b30b7d5}} 
+\index{Server@{Server}!run@{run}}
+\index{run@{run}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Server\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classServer_ad28c23eef4764ef4f4a140ba1f828a2c}\label{classServer_ad28c23eef4764ef4f4a140ba1f828a2c}} 
+\index{Server@{Server}!sendResult@{sendResult}}
+\index{sendResult@{sendResult}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{sendResult()}{sendResult()}}
+{\footnotesize\ttfamily bool Server\+::send\+Result (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{uint32\+\_\+t}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classServer_a6d12421c4ff7304b471015bc33ce13fa}\label{classServer_a6d12421c4ff7304b471015bc33ce13fa}} 
+\index{Server@{Server}!sendText@{sendText}}
+\index{sendText@{sendText}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{sendText()}{sendText()}}
+{\footnotesize\ttfamily bool Server\+::send\+Text (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classServer_a07c45a7e101a3926d8f9685c3c5d14e4}\label{classServer_a07c45a7e101a3926d8f9685c3c5d14e4}} 
+\index{Server@{Server}!stop@{stop}}
+\index{stop@{stop}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Server\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classServer_a1a47cfa76e5b97e9fc6412825775d1ba}\label{classServer_a1a47cfa76e5b97e9fc6412825775d1ba}} 
+\index{Server@{Server}!auth@{auth}}
+\index{auth@{auth}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{auth}{auth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAuthManager}{Auth\+Manager}}\& Server\+::auth\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classServer_a3c1f558b24a485a61822b50d3a02192a}\label{classServer_a3c1f558b24a485a61822b50d3a02192a}} 
+\index{Server@{Server}!logger@{logger}}
+\index{logger@{logger}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogger}{Logger}}\& Server\+::logger\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classServer_a926c9dae229a62b6d33fdbb41dca6d82}\label{classServer_a926c9dae229a62b6d33fdbb41dca6d82}} 
+\index{Server@{Server}!port@{port}}
+\index{port@{port}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily int Server\+::port\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classServer_a4db32e1a16e0423cf619d7914fa9b8c2}\label{classServer_a4db32e1a16e0423cf619d7914fa9b8c2}} 
+\index{Server@{Server}!running@{running}}
+\index{running@{running}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily bool Server\+::running\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Server_8h}{Server.\+h}}\item 
+\mbox{\hyperlink{server_8cpp}{server.\+cpp}}\end{DoxyCompactItemize}

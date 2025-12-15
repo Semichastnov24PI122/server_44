@@ -1,0 +1,37 @@
+\hypertarget{Server_8h_source}{}\doxysection{Server.\+h}
+\label{Server_8h_source}\index{Server.h@{Server.h}}
+\mbox{\hyperlink{Server_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef SERVER\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define SERVER\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <cstdint>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{AuthManager_8h}{auth/AuthManager.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Logger_8h}{logger/Logger.h}}"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{classServer}{Server}} \{}
+\DoxyCodeLine{18 \textcolor{keyword}{private}:}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{classServer_a926c9dae229a62b6d33fdbb41dca6d82}{port}};}
+\DoxyCodeLine{20     \mbox{\hyperlink{classAuthManager}{AuthManager}}\& \mbox{\hyperlink{classServer_a1a47cfa76e5b97e9fc6412825775d1ba}{auth}};}
+\DoxyCodeLine{21     \mbox{\hyperlink{classLogger}{Logger}}\& \mbox{\hyperlink{classServer_a3c1f558b24a485a61822b50d3a02192a}{logger}};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classServer_a4db32e1a16e0423cf619d7914fa9b8c2}{running}};}
+\DoxyCodeLine{23     }
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{classServer_a9a007f930773fa65802480e732c72971}{Server}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classServer_a926c9dae229a62b6d33fdbb41dca6d82}{port}}, \mbox{\hyperlink{classAuthManager}{AuthManager}}\& \mbox{\hyperlink{classServer_a1a47cfa76e5b97e9fc6412825775d1ba}{auth}}, \mbox{\hyperlink{classLogger}{Logger}}\& \mbox{\hyperlink{classServer_a3c1f558b24a485a61822b50d3a02192a}{logger}});}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_abb27d30b40a94326e3fd629d3b30b7d5}{run}}();  \textcolor{comment}{// Должен быть публичным!}}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_a07c45a7e101a3926d8f9685c3c5d14e4}{stop}}();}
+\DoxyCodeLine{28     }
+\DoxyCodeLine{29 \textcolor{keyword}{private}:}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_a1e0e064acb019cbe4c022857eed95a77}{handleClient}}(\textcolor{keywordtype}{int} clientSocket);}
+\DoxyCodeLine{31     std::string \mbox{\hyperlink{classServer_ac3030c84799aaf940198d0a0070c67fc}{receiveText}}(\textcolor{keywordtype}{int} socket);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classServer_a6d12421c4ff7304b471015bc33ce13fa}{sendText}}(\textcolor{keywordtype}{int} socket, \textcolor{keyword}{const} std::string\& text);}
+\DoxyCodeLine{33     std::vector<uint32\_t> \mbox{\hyperlink{classServer_a77b4723608950c6a5104848fc0d01668}{receiveVector}}(\textcolor{keywordtype}{int} socket);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classServer_ad28c23eef4764ef4f4a140ba1f828a2c}{sendResult}}(\textcolor{keywordtype}{int} socket, uint32\_t result);}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

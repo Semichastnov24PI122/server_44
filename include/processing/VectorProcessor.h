@@ -1,3 +1,10 @@
+/**
+ * @class VectorProcessor
+ * @brief Обработчик числовых векторов.
+ *
+ * Вычисляет сумму квадратов элементов вектора.
+ * Обрабатывает переполнение (возвращает UINT32_MAX при переполнении).
+ */
 #ifndef VECTORPROCESSOR_H
 #define VECTORPROCESSOR_H
 
